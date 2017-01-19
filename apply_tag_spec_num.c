@@ -48,7 +48,7 @@ void _spec_num_help(buffer *b_r, tags *t, char *num_str, int minus)
  */
 void get_sign(tags *t, int minus, char *front)
 {
-	if (t->spec == 'd' || t->spec == 'i')
+	if (t->spec == 'd' || t->spec == 'i' || t->spec == 'p')
 	{
 		if (minus == 1)
 			front[0] = '-';
@@ -83,10 +83,10 @@ char *check_prec(char *tmp_str, char *num_str, tags *t, int s_len)
 	j = l = 0;
 	if (t->prec != -1)
 	{
-		for (i = 0; i < 4; i++)
+		for (i = 0; t->flags[i] != '\0' ; i++)
 		{
-			if (t->flags[i] == '0')
-				t->flags[i] = '\0';
+			if (t->flags[i] == '1')
+				t->flags[i] = '2';
 		}
 		/*adding zero if prec found*/
 		if (t->prec > s_len)

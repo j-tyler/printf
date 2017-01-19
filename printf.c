@@ -85,6 +85,7 @@ void _parse(buffer *b_r)
 			table[i].spec_func(b_r, &t);
 		i++;
 	}
+	i = 0;
 }
 /**
  * _parse_tag - Build out the tags struct with tags found
