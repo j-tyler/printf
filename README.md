@@ -1,17 +1,22 @@
-#Holberton School Project - Rewrite Printf
+#Exploring the C programming language - Rewrite Printf
 ## Description
-This is a Holberton School partner project with @j-tyler and @rdsim8589. This project creates our version, _printf, of the C library function printf. Printf will load the data and converts them to character string and output to `stdout`. 
+This project creates our version, _printf, of the C library function printf. Printf formats data and converts it to a character string and outputs to `stdout`. 
 
 ##How To Use
 ```
 $ git clone git@github.com:j-tyler/printf.git
-```
-compile everything within the directory and use _printf instead of printf
-```
 $ gcc -Wall -Werror -Wextra -pedantic *.c
 ```
-##Declaration
+Compile everything within the directory and use _printf in your code.
+
+###Declaration
 int _printf(const char *format, ...)
+
+###Example
+```
+_printf("My %s is %d", "favorite number", 8);
+$ My favorite number is 8
+```
 
 ##Completed Features
 
